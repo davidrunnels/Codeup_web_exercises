@@ -7,17 +7,17 @@
 	<title>My First Form</title>
 </head>
 <body>
-<form method="POST" action="/process-form.php">
+<form method="POST" action="/my_first_form.php">
     <p>
-        <label for="username">Username</label>
+        <label for="username">Guest ID</label>
         <input id="username" name="username" type="text">
     </p>
     <p>
-        <label for="password">Password</label>
+        <label for="password">Secret Code</label>
         <input id="password" name="password" type="password">
     </p>
     <p>
-        <input type="submit" value="Login">
+        <button type="submit">Login</button>
     </p>
 </form>
 </body>
