@@ -7,7 +7,7 @@
 	<title>My First Form</title>
 </head>
 <body>
-<form method="POST" action="/process-form.php">
+<form method="GET" action="/process-form.php">
     <p>
         <label for="username">Username</label>
         <input id="username" name="username" type="text">
