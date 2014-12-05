@@ -1,4 +1,4 @@
-<?php>
+<?php
 	var_dump($_POST);
 	var_dump($_GET);
 ?>
@@ -7,7 +7,7 @@
 	<title>My First Form</title>
 </head>
 <body>
-<form method="GET" action="/process-form.php">
+<form method="POST" action="/process-form.php">
     <p>
         <label for="username">Username</label>
         <input id="username" name="username" type="text">
@@ -17,7 +17,7 @@
         <input id="password" name="password" type="password">
     </p>
     <p>
-        <input type="submit">
+        <input type="submit" value="Login">
     </p>
 </form>
 </body>
