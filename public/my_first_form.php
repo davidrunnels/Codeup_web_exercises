@@ -59,15 +59,14 @@ var_dump($_GET);
 			<label><input type="checkbox" id="jl7" name="os[]" value="cyborg"> Cyborg</label>
 
 		
-			<label for="comicSnob">Are you offended that you were forced to choose JL characters, instead of Avengers? </label>
-			<select id="comicSnob" name="comicSnob[]" multiple>
+			<label for="comicSnob">Are you offended that you were forced to choose JL characters, instead of Avengers? </label><br>			<select id="comicSnob" name="comicSnob[]" multiple>
 				<option value="1">Marvel forever!</option>
 				<option value="2">I prefer Indie boks</option>
 				<option value="3">Nope</option>
 			</select>
 
 			<p>
-			<label for="satisfaction">Are you enjoying my webpage? </label>
+			<label for="satisfaction">Are you enjoying my webpage? </label><br>
 			<select id="satisfaction" name="satisfaction[]" multiple>
 				<option value="1">Yes</option>
 				<option value="2">Of Course!</option>
