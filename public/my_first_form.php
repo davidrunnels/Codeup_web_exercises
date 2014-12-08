@@ -56,7 +56,14 @@ var_dump($_GET);
 			<label><input type="checkbox" id="jl6" name="os[]" value="aquaman"> Aquaman</label>
 			<label><input type="checkbox" id="jl7" name="os[]" value="cyborg"> Cyborg</label>
 
-			<input type="submit" value="Send"><br>
+			<input type="submit" value="Send"><br><br>
+
+			<label for="satisfaction">Are you enjoying my webpage? </label>
+			<select id="satisfaction" name="satisfaction">
+				<option selected>Yes</option>
+				<option>No</option>
+			</select>
+
 		</form>
 
 	</body>
