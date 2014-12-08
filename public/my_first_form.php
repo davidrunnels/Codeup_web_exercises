@@ -42,11 +42,13 @@ var_dump($_GET);
 			<label><input type="radio" id="q1b" name="q1" value="b">b</label>
 			<label><input type="radio" id="q1c" name="q1" value="c">c</label>
 			<label><input type="radio" id="q1d" name="q1" value="d">d</label><br>
+			
 			<p>The last question was?</p>
 			<label><input type="radio" id="q2a" name="q2" value="easy">easy</label>
 			<label><input type="radio" id="q2b" name="q2" value="silly">silly</label>
 			<label><input type="radio" id="q2c" name="q2" value="juvenile">juvenile</label>
 			<label><input type="radio" id="q2d" name="q2" value="annoying">annoying</label><br>
+			
 			<p>Who are your favorite members of the Justice League?</p>
 			<label><input type="checkbox" id="jl1" name="os[]" value="batman"> Batman</label>
 			<label><input type="checkbox" id="jl2" name="os[]" value="greenLantern"> Green Lantern</label>
@@ -56,13 +58,23 @@ var_dump($_GET);
 			<label><input type="checkbox" id="jl6" name="os[]" value="aquaman"> Aquaman</label>
 			<label><input type="checkbox" id="jl7" name="os[]" value="cyborg"> Cyborg</label>
 
-			<input type="submit" value="Send"><br><br>
-
-			<label for="satisfaction">Are you enjoying my webpage? </label>
-			<select id="satisfaction" name="satisfaction">
-				<option selected>Yes</option>
-				<option>No</option>
+		
+			<label for="comicSnob">Are you offended that you were forced to choose JL characters, instead of Avengers? </label>
+			<select id="comicSnob" name="comicSnob[]" multiple>
+				<option value="1">Marvel forever!</option>
+				<option value="2">I prefer Indie boks</option>
+				<option value="3">Nope</option>
 			</select>
+
+			<p>
+			<label for="satisfaction">Are you enjoying my webpage? </label>
+			<select id="satisfaction" name="satisfaction[]" multiple>
+				<option value="1">Yes</option>
+				<option value="2">Of Course!</option>
+				<option value="3">No</option>
+			</select></p>
+
+			<input type="submit" value="Send"><br><br>
 
 		</form>
 
