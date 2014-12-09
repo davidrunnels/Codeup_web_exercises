@@ -2,16 +2,23 @@ h1 {
     text-decoration: underline;
     font-weight: bold;
 }
+#container {
+        margin: 0px;
+        width: 500px;
+        height: 200px;
+        border: 1px solid #FFF;
 
-div {
+    }
+
+.box {
 	width: 50px;
  	height: 50px;
  	padding: 10px;
  	margin: 25px;
  	border: 1px solid black;
  	color: #FFF;
- 	font-weight: bold;
 }
+
 
 #red {
 	margin-left: 0px;
@@ -40,17 +47,15 @@ div {
 	background-color: #DF8BF1;
 	float: left;
 }
-.codeup-arrow_img {
+.codeup-arrow-img {
 	border: none;
 	position: relative;
-	bottom: 120px;
-	left: 5px;
+	bottom: 80px;
+	left: 40px;
 }
 .codeup-ribbon {
 	border: none;
 	position: fixed;
-	top: -35px;
-	right: 64px;
-
-
+	top: 0px;
+	right: 0px;
 }
