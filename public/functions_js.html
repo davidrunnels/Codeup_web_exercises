@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Functions JS Exercise</title>
+</head>
+<body>
+
+	<script>
+
+	var myNameIs = 'David'; 
+	function sayHello(fname){
+		console.log('Hello from ' + fname);
+	}
+	console.log(sayHello(myNameIs));
+
+	var random = Math.floor((Math.random()*100)+1);
+
+	function isOdd(number){
+		console.log((number %2 != 0)? number + " is odd": number + " is not odd");
+	}
+
+isOdd(random);
+</script>
+
+</body>
+</html>
