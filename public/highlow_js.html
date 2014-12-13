@@ -6,82 +6,90 @@
 </head>
 <body>
 
-<script>
+	<script>
 
-var guess_number = 0;
+	var guess_number = 0;
 
-alert("Okay, let's play Guess a Number!");
+	alert("Ready to play Guess a Number?");
 
+	// get low number, trim, check for NaN and >= 1
 
+	while(true){
+		var user_number_low = prompt("You will guess a random number between two numbers you give me (one low and one high).\nWhat will be the starting (low) number?");
+
+		user_number_low = user_number_low.trim();
+		console.log(user_number_low) + " is low\n";
+
+		if (user_number_low == NaN) {
+			alert("I need a number.");
+			continue;
+
+		} else if (user_number_low >= 1) {
+			break;
+
+		}
+	}
+
+	// get high number, trim, check for NaN and >= low number
+
+	while(true){
+		var user_number_high = prompt("Your the starting number is " + user_number_low.trim() + ".\nWhat will be the ending (high) number?");
+		
+		user_number_high = user_number_high.trim();
+		console.log(user_number_high) + " is high\n";
+
+		if (user_number_low == NaN) {
+			alert("I need a number.");
+			continue;
+
+		} else if (user_number_high > user_number_low) {
+			break;
+
+		} else if (user_number_high < user_number_low) {
+			alert("I need a number higher than " + user_number_low + ".");
+			continue;
+		}
+	}
+
+	var random_number = Math.floor((Math.random()*user_number_high)+ user_number_low + 1);
+	
+	console.log(random_number) + " is random\n";
+
+	while(true) {
+		var user_number_guess = prompt("You are guessing between " + user_number_low + " and " + user_number_high + ".\nWhat is your guess?");
+		i = 1;
+		user_number_guess = user_number_guess.trim();
+		console.log(user_number_guess) + " is guess number " + i + ".";
+		i++;
+
+		if (user_number_guess == NaN) {
+			alert("I need a number.");
+			console.log(user_number_low, user_number_high, random, user_number_guess);
+			continue;
+
+		} else if (user_number_guess < user_number_low) {
+			alert("I need a number higher than " + user_number_low + ".");
+			continue;
+
+		} else if (user_number_guess < random_number) {
+			alert("Higher.");
+			continue;
+
+		} else if (user_number_guess > random_number) {
+			alert("Lower.");
+			continue;
+
+		} else if (user_number_guess == random_number) {
+			alert("You got it!  The number is " + random_number + ".");
+			break;
+
+	// } else if (user_number_guess > user_number_high) {
+	// 		alert("I need a number lower than " + user_number_high + ".");
+	// 		continue;
+}
+}
 
 </script>
 
 </body>
 </html>
-
-
-<!-- 
-
-if ($argc == 3) {
-
-	$random_number = mt_rand($argv[1] , $argv[2]);
-
-	echo "Guess the random number between $argv[1] and $argv[2].\n";
-    
-	} else {
-		echo "Give me the range of numbers to use.\n";
-
-		fwrite(STDOUT, "Enter the low number: ");
-
-		$low_number = trim(fgets(STDIN));
-
-		fwrite(STDOUT, "Enter the high number: ");
-
-		$high_number = trim(fgets(STDIN));
-
-		$random_number = mt_rand($low_number, $high_number);
-
-		echo "Guess the random number between $low_number and $high_number.\n";
-}
-
-do {
-
-	// user guess at number
-
-	fwrite(STDOUT, 'Guess a number: ');
-
-	// Get the input from user
-
-	$guess = trim(fgets(STDIN));
-
-	$guess_number++;
-
-
-	if (is_numeric($guess)) {
-
-		if ($guess > $random_number) {
-
-    	echo "Lower...\n";
-
-		} elseif ($guess < $random_number) {
-   
-    	echo "Higher...\n";
-
-		} elseif ($guess = $random_number) {
-
-		echo "You got it!\n";
-		}
-
-	}
-
-	else {
-
-		echo "Seriously, enter a NUMBER.\n";
-	
-	}
-
-} while ($guess != $random_number);
-
-	echo "It took you $guess_number guesses.\n";
-
- -->
