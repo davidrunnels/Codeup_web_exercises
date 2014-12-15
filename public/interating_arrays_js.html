@@ -21,7 +21,31 @@ console.log(names);
 // todo:
 // Create log statements that will print each of the names array elements individually.
 
-console.log(names[0],names[1],names[2],names[3]);
+
+// for ... in
+for (index in names) {
+	console.log('The shape at index ' + index + ' is: ' + names[index]);
+
+}
+
+
+// loop
+for (var i = 0; i < names.length; i++) {
+	console.log('The name at index ' + i + ' is: ' + names[i]);
+}
+
+// for each   function in a function
+names.forEach(function(value, key, array){
+	console.log('The shape at index ' + key + ' is: ' + value);
+});
+
+// loop calling a loop
+function loopArray(value, key, array) {
+	console.log('The name at index ' + key + ' is: ' + value);
+
+}
+
+names.forEach(loopArray);
 
 </script>
 
