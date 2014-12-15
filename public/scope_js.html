@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Scope JS Exercise</title>
+</head>
+<body>
+
+	<script>
+	
+	(function (){
+		var myNameIs = 'David';
+		console.log('Hello from ' + myNameIs);
+	})();
+
+	var random = Math.floor((Math.random()*100)+1);
+
+	(function(){
+		var number = 3
+		console.log((number % 2 != 0)? number + " is odd": number + " is not odd");
+	})();
+
+
+</script>
+
+</body>
+</html>
