@@ -18,7 +18,8 @@
 		var user_number_low = prompt("You will guess a random number between two numbers you give me (one low and one high).\nWhat will be the starting (low) number?");
 
 		user_number_low = user_number_low.trim();
-		console.log(user_number_low) + " is low\n";
+		user_number_low = parseInt(user_number_low);
+		console.log(user_number_low + " is low\n");
 
 		if (user_number_low == NaN) {
 			alert("I need a number.");
@@ -33,10 +34,11 @@
 	// get high number, trim, check for NaN and >= low number
 
 	while(true){
-		var user_number_high = prompt("Your the starting number is " + user_number_low.trim() + ".\nWhat will be the ending (high) number?");
+		var user_number_high = prompt("Your the starting number is " + user_number_low + ".\nWhat will be the ending (high) number?");
 		
 		user_number_high = user_number_high.trim();
-		console.log(user_number_high) + " is high\n";
+		user_number_high = parseInt(user_number_high)
+		console.log(user_number_high + " is high\n");
 
 		if (user_number_low == NaN) {
 			alert("I need a number.");
