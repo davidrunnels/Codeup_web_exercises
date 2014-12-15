@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Internating Arrays Classroom Edition JS Exercise</title>
+</head>
+<body>
+
+<script>
+
+var classroom = ['Nicole', 'Calvin', 'Felice', 'David', 'Kevin', 'Michael', 'Stephanie (Beyonce)', 'Paul', 'Chris', 'Jeff', 'Marissa', 'Travis'];
+
+console.log(classroom);
+
+for (index in classroom) {
+	if (classroom[index] == 'David') {
+		console.log(classroom[index] + ' - That\'s me!');
+	} else if (classroom[index] == 'Felice') {
+		console.log(classroom[index] + ' - That\'s my neighbor.');
+	} else {
+		console.log(classroom[index]);
+		
+	}
+
+}
+
+</script>
