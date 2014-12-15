@@ -15,7 +15,7 @@
 	// get low number, trim, check for NaN and >= 1
 
 	while(true){
-		var user_number_low = prompt("You will guess a random number between two numbers you give me (one low and one high).\nWhat will be the starting (low) number?");
+		var user_number_low = prompt("You will try to guess a random number.\nYou will give me a two numbers to set the range (one low and one high).\nWhat will be the starting (low) number?");
 
 		user_number_low = user_number_low.trim();
 		user_number_low = parseInt(user_number_low);
@@ -52,10 +52,10 @@
 			continue;
 		}
 	}
-
-	var random_number = Math.floor((Math.random()*user_number_high)+ user_number_low + 1);
+	var random_number = Math.floor(Math.random() * (user_number_high - user_number_low + 1)) + user_number_low;
+	// var random_number = Math.floor((Math.random()*user_number_high)+ user_number_low + 1);
 	
-	console.log(random_number) + " is random\n";
+	console.log(random_number + " is random\n");
 
 	while(true) {
 		var user_number_guess = prompt("You are guessing between " + user_number_low + " and " + user_number_high + ".\nWhat is your guess?");
