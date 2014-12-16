@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Objects JSON JS Exercise</title>
+</head>
+<body>
+
+<script>
+// todo:
+// Create an array of objects that represent books.
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+
+var books = [
+	{'title': 'The Stand',
+	 'year': 1978,
+	 'paperback': true,
+	 'author': {
+	 	'firstName': 'Stephen',
+	 	'lastName': 'King'
+	 } 
+	},
+
+	{'title': 'The Count of Monte Cristo',
+	 'year': 1844,
+	 'paperback': true,
+	 'author': {
+	 	'firstName': 'Alexandre',
+	 	'lastName': 'Dumas'
+	 } 
+	},
+
+	{'title': 'Les Miserables',
+	 'year': 1862,
+	 'paperback': false,
+	 'author': {
+	 	'firstName': 'Victor',
+	 	'lastName': 'Hugo'
+	 } 
+	},
+
+	{'title': 'The Prince',
+	 'year': 1532,
+	 'paperback': true,
+	 'author': {
+	 	'firstName': 'Niccolò',
+	 	'lastName': 'Machiavelli'
+	 } 
+	},
+
+	{'title': 'Ender\'s Shadow',
+	 'year': 1999,
+	 'paperback': true,
+	 'author': {
+	 	'firstName': 'Orson',
+	 	'middleName': 'Scott',
+	 	'lastName': 'Card'
+	 } 
+	}
+];
+
+// log out the books array
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+
+// for ... in loop
+console.log('***This list is done with a for ... loop***')
+for (index in books) {
+    console.log("Book #" + (index + 1));
+    console.log("Title: " + books[index].title);
+    console.log("Author: " + books[index].author.firstName + " " + books[index].author.lastName);
+    console.log("Year Written: " + books[index].year);
+    console.log("Paperback: " + books[index].paperback);
+    console.log("---");
+};
+
+// for each loop
+console.log('***This list is done with a forEach loop***')
+books.forEach(function(element, index, array){
+	console.log("Book #" + (index + 1));
+    console.log("Title: " + element.title);
+   	console.log("Author: " + element.author.firstName + " " + element.author.lastName);
+   	console.log("Year Written: " + element.year);
+   	console.log("Paperback: " + element.paperback);
+   	console.log("---");
+});
+
+
+// end loop here
+
+</script>
+
+</body>
+</html>
