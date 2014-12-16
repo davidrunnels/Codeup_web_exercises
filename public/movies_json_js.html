@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Movies JSON JS Exercise</title>
+</head>
+<body>
+
+<script>
+
+var movies = [
+{
+"title": "The Hobbit: The Battle of Five Armies",
+"year": 2014,
+"rating": "PG-13",
+"length": 144,
+"metascore": 65,
+"director": "Peter Jackson",
+"description": "Bilbo and Company are forced to engage in a war against an array of combatants and keep the terrifying Smaug from acquiring a kingdom of treasure and obliterating all of Middle-Earth."
+},
+
+{
+"title": "Night at the Museum: Secret of the Tomb ",
+"year": 2014,
+"rating": "PG",
+"length": 97,
+"metascore": 38,
+"director": "Shawn Levy",
+"description": "Larry spans the globe, uniting favorite and new characters while embarking on an epic quest to save the magic before it is gone forever."
+},
+
+{
+"title": "Birdman",
+"year": 2014,
+"rating": "R",
+"length": 119,
+"metascore": 89,
+"director": "Alejandro González Iñárritu",
+"description": "A washed-up actor who once played an iconic superhero must overcome his ego and family trouble as he mounts a Broadway play in a bid to reclaim his past glory."
+},
+
+{
+"title": "Mr. Turner",
+"year": 2014,
+"rating": "R",
+"length": 150,
+"metascore": 93,
+"director": "Mike Leigh",
+"description": "An exploration of the last quarter century of the great, if eccentric, British painter J.M.W. Turner's life."
+},
+
+{
+"title": "Annie",
+"year": 2014,
+"rating": "PG",
+"length": 118,
+"metascore": 23,
+"director": "Will Gluck",
+"description": "A foster kid, who lives with her mean foster mom, sees her life change when business tycoon and New York mayoral candidate Will Stacks makes a thinly-veiled campaign move and takes her in."
+}
+];
+
+// Title (year) | rating
+// length: 25 | metascore
+// director
+// description
+// ===============================
+
+movies.forEach(function(element, index, array){
+console.log(element.title + "(" + element.year + ")" + " | " + element.rating);
+if(element.rating == 'PG-13') {
+	console.warn('Some material may not be appropriate for chldern under 13.');
+}else if(element.rating == 'R') {
+	console.warn('Under 17 must be accompanied by a guardian.');
+}
+console.log('Length: ' + element.length + " | " + 'Metascore: ' + element.metascore);
+console.log('Director: ' + element.director);
+console.log('Description: ' + element.description);
+
+console.log('===============================');
+});
+
+
+
+</script>
+
+</body>
+</html>
