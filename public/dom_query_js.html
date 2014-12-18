@@ -54,21 +54,24 @@
         } 
     
 
-            // if (dbId == 1) {
-            //     listItems[i].style['color'] = 'blue';
 
         // todo: set text color of li with dbid = 1 to blue
+            var listElement = document.getElementsByTagName('li')[0];
+            // var btn4Event = function(){
+            listElement.style['color'] = 'blue';
+                // listItems[i].style['color'] = 'blue';
 
         // listItems[0].style['color']='blue';
 
         // todo: get all elements with class name sub-paragraph
-        // var subParagraph = document.getElementsByClassName('sub-paragraph');
+        var subParagraph = document.getElementsByClassName('sub-paragraph');
 
         // todo: change the text in the first sub paragraph to "Mission Accomplished!"
 
-        // for (var i = 0; i < subParagraph.length; i++) {
-            // sub-paragraph[i].innerHTML = "Mission Accomplished!";
-
+        for (var i = 0; i < subParagraph.length; i++) {
+           var subParagraph = document.getElementsByClassName('sub-paragraph');
+           subParagraph[i].innerHTML = "Mission Accomplished!";
+       }
     </script>
 
 </body>
