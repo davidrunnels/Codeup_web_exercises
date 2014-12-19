@@ -25,22 +25,33 @@
     var count = 0;
     var maxCount = 10;
     var detonationTimer = 10; // seconds
+    var timer = null;
 
     // TODO: Create a variable to represent your setInterval timer,
     //       which will have a one second interval. It should use
     //       the following function
-    function gameInterval()
-    {
+     var intervalId = setInterval(function () {
+
+    
         // TODO: Decrement detonationTimer by one each interval.
+        detonationTimer--;
 
         // TODO: Update the timer div with the new value
 
+        document.getElementById('timer').innerHTML = detonationTimer
+
         // TODO: Console log the current remaining time.
+
+        console.log('You have ' + detonationTimer + ' seconds left.');
 
         // TODO: Explode the BOM with an alert if the timer runs out.
         // TODO: Clear the interval afterwards.
 
-    }
+        if (detonationTimer == 0) {
+            console.log('The BOM went boom!');
+            clearInterval(intervalId);
+        }
+}, 1000);
 
     // TODO: Create a variable whose value is the btnDefuse element.
     
