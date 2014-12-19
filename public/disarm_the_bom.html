@@ -16,16 +16,16 @@
 <body>
     <h1>Mission Impossible!</h1>
     
-    <div id="timer"></div>
+    <div id='timer'></div>
     
-    <button id="btnDefuse">Defuse the BOM!</button>
+    <button id='btnDefuse'>Defuse the BOM!</button>
     
     <script>
     // Initialize some variables.  You don't have to change these.
     var count = 0;
     var maxCount = 10;
     var detonationTimer = 10; // seconds
-    var timer = null;
+    // var timer = null;
 
     // TODO: Create a variable to represent your setInterval timer,
     //       which will have a one second interval. It should use
@@ -54,33 +54,40 @@
 }, 1000);
 
     // TODO: Create a variable whose value is the btnDefuse element.
+
+    var buttonDefuseId = document.getElementById('btnDefuse');
     
     // TODO: Attach an event listener to that variable, which runs this function when clicked.
-    function defuseButtonClick()
-    {
+    buttonDefuseId.addEventListener('click', function() {
+    
         // TODO: Generate the random value for the margin-top css property
+        var randTop = Math.floor(Math.random() * (600 + 1) + 1);
+
         // TODO: Generate the random value for the margin-left css property
+        var randLeft = Math.floor(Math.random() * (800 + 1) + 1);
+
 
         // TODO: If the count is equal or greater than maxCount
         if (count >= maxCount) {
             // TODO: Clear the interval.
-            
+            clearInterval(intervalId);
             // TODO: Alert "You are a hero! You disarmed the BOM!"
             alert('You are a hero! You disarmed the BOM!');
         } else {
             // TODO: Assign the random margin top to the button
+            document.getElementById('btnDefuse').style.marginTop = randTop;
             
             // TODO: Assign the random margin left to the button
+            document.getElementById('btnDefuse').style.marginLeft = randLeft;
             
             // TODO: Increment the count by one
             count++;
         }
-    }
+    });
     
-    function getRandomInt(min, max)
-    {
-        
-    }
+//     function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
     </script>
 </body>
 </html>
