@@ -4,12 +4,12 @@
     <title>Disarm the BOM (Browser Object Model)</title>
     <style type="text/css">
         #timer {
-            font-size: 60px;
+            font-size: 250px;
             color: red;
 
             position: fixed;
-            right: 10px;
-            top: 0px;
+            right: 50px;
+            top: 10px;
         }
     </style>
 </head>
@@ -22,7 +22,7 @@
     
     <script>
     // Initialize some variables.  You don't have to change these.
-    var count = 0;
+    var count = 1;
     var maxCount = 10;
     var detonationTimer = 10; // seconds
     // var timer = null;
@@ -38,7 +38,7 @@
 
         // TODO: Update the timer div with the new value
 
-        document.getElementById('timer').innerHTML = detonationTimer
+        document.getElementById('timer').innerHTML = detonationTimer;
 
         // TODO: Console log the current remaining time.
 
@@ -61,10 +61,10 @@
     buttonDefuseId.addEventListener('click', function() {
     
         // TODO: Generate the random value for the margin-top css property
-        var randTop = Math.floor(Math.random() * (600 + 1) + 1);
+        var randTop = Math.floor(Math.random() * (300 + 1) + 1);
 
         // TODO: Generate the random value for the margin-left css property
-        var randLeft = Math.floor(Math.random() * (800 + 1) + 1);
+        var randLeft = Math.floor(Math.random() * (500 + 1) + 1);
 
 
         // TODO: If the count is equal or greater than maxCount
@@ -73,21 +73,25 @@
             clearInterval(intervalId);
             // TODO: Alert "You are a hero! You disarmed the BOM!"
             alert('You are a hero! You disarmed the BOM!');
-        } else {
+
+            var remover = function(event) {        
+            buttonDefuseId.addEventListener('click');
+            console.log('event listener removed');
+        }
+
+            } else {
             // TODO: Assign the random margin top to the button
-            document.getElementById('btnDefuse').style.marginTop = randTop;
+            document.getElementById('btnDefuse').style.marginTop = randTop + 'px';
             
             // TODO: Assign the random margin left to the button
-            document.getElementById('btnDefuse').style.marginLeft = randLeft;
+            document.getElementById('btnDefuse').style.marginLeft = randLeft + 'px';
             
             // TODO: Increment the count by one
             count++;
+            console.log(count, randTop, randLeft);
         }
     });
     
-//     function getRandomInt(min, max) {
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
     </script>
 </body>
 </html>
