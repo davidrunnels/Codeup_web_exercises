@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>JQuery Exercise</title>
+</head>
+<body>
+	<h1 id="greeting" class="header">Hello!</h1>
+
+	<div id="main-container" class="div">
+		<h1 id="main-header" class="header">Exercise 7.1.1</h1>
+
+		<p id="paragraph-one" class="paragraph">Create content in your HTML file using at least the following elements: h1, p, ul, li, div.</p>
+
+		<ul id="list" class="">
+			<li id="item-one" class="list-item">Moe</li>
+			<li id="item-two" class="list-item">Larry</li>
+			<li id="item-three" class="list-item">Curly</li>
+		</ul>
+
+	</div>
+
+	<!-- javascript -->
+	<script src="/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		console.log('The DOM has finished loading!');
+    		var  greeting = $('#greeting').text();
+    		console.log(greeting);
+    		var paragraph = $('#paragraph-one').html();
+    		console.log(paragraph);
+
+		});
+	</script>
+</body>
+</html>
