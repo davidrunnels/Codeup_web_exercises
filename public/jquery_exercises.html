@@ -21,14 +21,26 @@
 	<!-- javascript -->
 	<script src="/js/jquery.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-    		console.log('The DOM has finished loading!');
-    	$('.list-item').css('border-style', 'solid').css('border-width', '1px');
-    	$('li').css('font-size', '20px');
-   		$('h1, p, li').css('background-color', '#39F');
-   		var  h1Alert = $('h1').text();
-    		console.log(h1Alert);
+		$('document').ready(function() {
+    		$('#greeting').click(function() {
+            	$(this).css('background', '#3399FF');
+           });
+
+    			$('p').dblclick(function() {
+            		$(this).css('font-size', '18px');
+    			});	
+
+    		 	$('li').hover(
+        			function() {
+            			$(this).css('background-color', '#39F');
+        			},
+        			function() {
+            		$(this).css('background-color', '#FFF');
+        			});
 		});
+
+    
+
 	</script>
 </body>
 </html>
