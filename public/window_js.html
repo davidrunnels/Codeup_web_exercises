@@ -6,20 +6,22 @@
 </head>
 <body>
     <h2>Autosaving Text Input</h2>
-    <textarea rows="10" cols="60" id="important"></textarea>
+    <!-- <textarea rows="10" cols="60" id="not-so-important"></textarea> -->
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript"></script>
 
     <script>
 
-    	var delay = 5000;
-    	var timeOutId = null;
+    var delay = 5000;
+    var timeOutId = null;
 
-        function save() {
-            alert('Saved!');
+    function save() {
+        alert('Saved!');
             // console.log(timeOutId);
         }
 
         function autosave() {
-        	clearTimeout(timeOutId);
+            clearTimeout(timeOutId);
             timeOutId = setTimeout(save, delay);
             // console.log(timeOutId);
             // todo:
@@ -34,9 +36,20 @@
         // this causes the autosave function to be called whenever
         // a key up event occurs in the textarea
         // we will learn about events in the DOM lessons
-        var textarea = document.getElementById('important');
-        textarea.addEventListener('keyup', autosave, false);
+        // var textarea = document.getElementById('important');
+        // textarea.addEventListener('keyup', autosave, false);
 
-    </script>
-</body>
-</html>
+
+        $('document').ready(function() {
+            $('#important').keyup(autosave);
+        });
+
+
+        </script>
+    
+        <p>Please type something into this form:</p>
+            <form>
+                <input type="text" id="important" name="textfield" placeholder="Type Here"/>
+            </form>
+    </body>
+    </html>
