@@ -11,7 +11,9 @@ define('DB_PASS', 'codeup');
 require_once('../db_connect.php');
 
 $dbcResult = $dbc->query("SELECT name, location, date_established, area_in_acres
-                          FROM national_parks");
+                          FROM national_parks
+                          LIMIT 4");
+
 ?>
 
 <!DOCTYPE html>
