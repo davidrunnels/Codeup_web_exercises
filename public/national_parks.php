@@ -12,7 +12,7 @@ require_once('../db_connect.php');
 
 $dbcResult = $dbc->query("SELECT name, location, date_established, area_in_acres
                           FROM national_parks
-                          LIMIT 4");
+                          ");
 
 ?>
 
@@ -49,10 +49,10 @@ $dbcResult = $dbc->query("SELECT name, location, date_established, area_in_acres
 	<table class="table table-striped table-bordered table-condensed">
 
  <tr id="table_header">
-       <th style="width: 10%;">Name&nbsp;</th>
-       <th style="width: 10%;">Location&nbsp;</th>
-       <th style="width: 15%;">Date Established&nbsp;</th>
-       <th style="width: 15%;">Area in Acres&nbsp;</th>
+       <th width="25%">Name&nbsp;</th>
+       <th width="25%">Location&nbsp;</th>
+       <th width="25%">Date Established&nbsp;</th>
+       <th width="25%">Area in Acres&nbsp;</th>
      </tr>
 <?
   while ($parks = $dbcResult->fetch(PDO::FETCH_ASSOC)) {
