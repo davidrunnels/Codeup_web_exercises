@@ -13,14 +13,8 @@ require_once('../db_connect.php');
 $dbcResult = $dbc->prepare("SELECT name, location, date_established, area_in_acres, description
   FROM national_parks");
 
-// $name = (!isset($_POST['name'])) ? '' : $_POST['name'];
-// $location = (!isset($_POST['location'])) ? '' : $_POST['location'];
-// $date_established = (!isset($_POST['date_established'])) ? '' : $_POST['date_established'];
-// $area_in_acres = (!isset($_POST['area_in_acres'])) ? '' : $_POST['area_in_acres'];
-// $description = (!isset($_POST['description'])) ? '' : $_POST['description'];
-
 if(!empty($_POST)){
-var_dump($_POST);
+
     $stmt = $dbc->prepare('INSERT INTO national_parks (name, location, date_established, area_in_acres, description)
     VALUES (:name, :location, :date_established, :area_in_acres, :description)');
 
